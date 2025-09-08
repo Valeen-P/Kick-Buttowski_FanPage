@@ -1,0 +1,421 @@
+/* Estilos Generales */
+body {
+    font-family: 'Comic Neue', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    background-image: url('../Carpeta_imagenes/double-bubble-outline-inicio.webp');
+}
+
+/* Header y Navegación */
+header {
+    background-color: #e63946;
+    color: white;
+    padding: 10px 0;
+    border-bottom: 5px solid #fca311;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 65px;
+    filter: drop-shadow(-1px 3px 10px #00000080);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #fca311;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Portada */
+#portada {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenido Principal */
+#contenido {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.scroll-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.scroll-section .texto {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.scroll-section .imagen {
+    flex: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.scroll-section .imagen img {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Invertir orden para secciones impares */
+.scroll-section:nth-child(odd) .texto {
+    order: 2;
+}
+
+.scroll-section:nth-child(odd) .imagen {
+    order: 1;
+}
+
+h2 {
+    font-family: 'Bangers', cursive;
+    font-size: 3em;
+    color: #e63946;
+    text-shadow: 2px 2px 0 #fca311, -1px -1px 0 #fca311, 1px -1px 0 #fca311, -1px 1px 0 #fca311, 1px 1px 0 #fca311;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 5px solid #fca311;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 15px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #e63946;
+}
+
+.highlight {
+    color: #e63946;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fca311;
+}
+
+/* Contacto Rediseñado - Estilo Kick Buttowski */
+#contacto.stunt-zone {
+    padding: 80px 20px;
+    background: #f0f2f5 url('../Carpeta_imagenes/graphy-contacto.webp');
+    overflow: hidden;
+}
+
+.section-title-container {
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.stunt-title {
+    font-family: 'Bangers', cursive;
+    font-size: 4.5em;
+    color: #fff;
+    background-color: #e63946;
+    display: inline-block;
+    padding: 10px 30px;
+    border: 5px solid #1d3557;
+    transform: rotate(-3deg);
+    text-shadow: 3px 3px 0 #1d3557;
+    position: relative;
+    z-index: 2;
+}
+
+.danger-strips {
+    position: absolute;
+    width: 120%;
+    height: 40px;
+    background: repeating-linear-gradient(
+        45deg,
+        #fca311,
+        #fca311 20px,
+        #1d3557 20px,
+        #1d3557 40px
+    );
+    left: -10%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.contacto-container-redesigned {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.formulario-rampa, .mapa-explosivo {
+    background-color: #fff;
+    border: 3px solid #1d3557;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0px #1d3557;
+    flex: 1;
+    min-width: 320px;
+    max-width: 500px;
+}
+
+.formulario-rampa {
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+}
+
+.formulario-rampa:hover {
+    transform: rotate(0deg);
+}
+
+.mapa-explosivo {
+    transform: rotate(2deg);
+    transition: transform 0.3s ease;
+}
+
+.mapa-explosivo:hover {
+    transform: rotate(0deg);
+}
+
+.formulario-rampa h3, .mapa-explosivo h3 {
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+    color: #e63946;
+    text-align: center;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 0 #fca311;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input, .input-group textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px 20px 15px 50px;
+    border: 3px solid #fca311;
+    border-radius: 5px;
+    font-family: 'Comic Neue', cursive;
+    font-size: 1.1em;
+    background-color: #f0f0f0;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    outline: none;
+    border-color: #e63946;
+    box-shadow: 0 0 10px #e6394660;
+}
+
+.form-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #1d3557;
+    font-size: 1.5em;
+}
+
+.launch-button {
+    background: linear-gradient(180deg, #e63946 0%, #c12a37 100%);
+    color: white;
+    width: 100%;
+    padding: 20px;
+    border: 5px outset #fca311;
+    border-radius: 10px;
+    font-family: 'Bangers', cursive;
+    font-size: 2.5em;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.launch-button:hover {
+    background: linear-gradient(180deg, #ff4b5a 0%, #e63946 100%);
+    transform: scale(1.05);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+}
+
+.launch-button:active {
+    transform: scale(0.95);
+    border-style: inset;
+}
+
+.rocket-icon {
+    display: inline-block;
+    transition: transform 0.5s ease;
+}
+
+.launch-button:hover .rocket-icon {
+    transform: translateY(-15px) rotate(45deg);
+}
+
+.map-cracked {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #ddd;
+    border: 3px solid #1d3557;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.map-cracked .crack {
+    position: absolute;
+    background: rgba(29, 53, 87, 0.7);
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+.map-cracked .crack:nth-child(1) {
+    width: 4px;
+    height: 100%;
+    left: 50%;
+    top: 0;
+    transform: rotate(20deg);
+}
+.map-cracked .crack:nth-child(2) {
+    width: 120%;
+    height: 4px;
+    left: -10%;
+    top: 40%;
+    transform: rotate(-10deg);
+}
+.map-cracked .crack:nth-child(3) {
+    width: 4px;
+    height: 60%;
+    left: 60%;
+    top: -20%;
+    transform: rotate(80deg);
+}
+
+/* Responsive para el rediseño */
+@media (max-width: 992px) {
+    .formulario-rampa, .mapa-explosivo {
+        transform: rotate(0deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #e63946;
+        position: absolute;
+        top: 89px; /* Ajusta según la altura de tu header */
+        left: 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .scroll-section {
+        flex-direction: column;
+    }
+
+    .scroll-section:nth-child(odd) .texto,
+    .scroll-section:nth-child(odd) .imagen {
+        order: 0; /* Reset order for stacked layout */
+    }
+
+    .contacto-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
