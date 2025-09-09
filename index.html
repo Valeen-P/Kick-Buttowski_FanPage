@@ -65,125 +65,122 @@
     </main>
 
     <section id="personajes">
-        <h2>Personajes Principales</h2>
-        <div class="timeline-stripe">
-            <div class="timeline-stripe-line"></div>
-            <div class="timeline-stripe-item" data-modal="kick-modal">
-                <div class="timeline-stripe-card">
-                    <img src="Carpeta_imagenes/kick-heroe.jpg" alt="Kick Buttowski">
-                    <h3>Kick Buttowski</h3>
-                </div>
-            </div>
-            <div class="timeline-stripe-item" data-modal="gunther-modal">
-                <div class="timeline-stripe-card">
-                    <img src="" alt="Gunther Magnuson">
-                    <h3>Gunther Magnuson</h3>
-                </div>
-            </div>
-            <div class="timeline-stripe-item" data-modal="brad-modal">
-                <div class="timeline-stripe-card">
-                    <img src="" alt="Brad Buttowski">
-                    <h3>Brad Buttowski</h3>
-                </div>
-            </div>
-            <div class="timeline-stripe-item" data-modal="brianna-modal">
-                <div class="timeline-stripe-card">
-                    <img src="" alt="Brianna Buttowski">
-                    <h3>Brianna Buttowski</h3>
-                </div>
-            </div>
-            <div class="timeline-stripe-item" data-modal="harold-modal">
-                <div class="timeline-stripe-card">
-                    <img src="" alt="Harold Buttowski">
-                    <h3>Harold Buttowski</h3>
-                </div>
-            </div>
-            <div class="timeline-stripe-item" data-modal="honey-modal">
-                <div class="timeline-stripe-card">
-                    <img src="" alt="Honey Buttowski">
-                    <h3>Honey Buttowski</h3>
-                </div>
-            </div>
-            <div class="timeline-stripe-item" data-modal="wade-modal">
-                <div class="timeline-stripe-card">
-                    <img src="" alt="Wade">
-                    <h3>Wade</h3>
-                </div>
-            </div>
-            <div class="timeline-stripe-item" data-modal="kendall-modal">
-                <div class="timeline-stripe-card">
-                    <img src="" alt="Kendall Perkins">
-                    <h3>Kendall Perkins</h3>
+    <h2 class="section-title">Personajes Principales</h2>
+    <div class="timeline-stripe">
+        <!-- Kick -->
+        <div class="timeline-stripe-item" onclick="expandCard(this)">
+            <div class="timeline-stripe-card">
+                <h3>Kick Buttowski</h3>
+                <img src="Carpeta_imagenes/buttowski_deLado_720.png" alt="Kick Buttowski">
+                <div class="timeline-details">
+                    <div class="timeline-details-content">
+                        <h2>Kick Buttowski</h2>
+                        <p>El protagonista temerario que sueña con ser el mejor acróbata del mundo.</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Modals -->
-    <div id="kick-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img src="" alt="Kick Buttowski PNG">
-            <h2>Kick Buttowski</h2>
-            <p>Clarence Francis "Kick" Buttowski es el protagonista de la serie. Es un joven de 10 años que aspira a convertirse en el acróbata más grande del mundo. Es valiente, audaz y nunca se rinde ante un desafío.</p>
+        <!-- Gunther -->
+        <div class="timeline-stripe-item" onclick="expandCard(this)">
+            <div class="timeline-stripe-card">
+                <h3>Gunther Magnuson</h3>
+                <img src="Carpeta_imagenes/Gunther.webp" alt="Gunther Magnuson">
+                <div class="timeline-details">
+                    <div class="timeline-details-content">
+                        <h2>Gunther Magnuson</h2>
+                        <p>El mejor amigo de Kick, siempre dispuesto a apoyarlo en sus locuras.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="gunther-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img src="" alt="Gunther Magnuson PNG">
-            <h2>Gunther Magnuson</h2>
-            <p>Gunther Magnuson es el mejor amigo y coordinador de acrobacias de Kick. Es un chico vikingo de ascendencia noruega. Es leal, optimista y siempre apoya a Kick en sus audaces acrobacias.</p>
+
+        <!-- Brad -->
+        <div class="timeline-stripe-item" onclick="expandCard(this)">
+            <div class="timeline-stripe-card">
+                <h3>Brad Buttowski</h3>
+                <img src="Carpeta_imagenes/Bradley_Buttowski.webp" alt="Brad Buttowski">
+                <div class="timeline-details">
+                    <div class="timeline-details-content">
+                        <h2>Brad Buttowski</h2>
+                        <p>El hermano mayor de Kick, arrogante y que disfruta molestarlo.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="brad-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img src="" alt="Brad Buttowski PNG">
-            <h2>Brad Buttowski</h2>
-            <p>Brad Buttowski es el hermano mayor de Kick. Es el principal antagonista de Kick en casa. Es perezoso, molesto y siempre trata de arruinar las acrobacias de Kick.</p>
+
+        <!-- Brianna -->
+        <div class="timeline-stripe-item" onclick="expandCard(this)">
+            <div class="timeline-stripe-card">
+                <h3>Brianna Buttowski</h3>
+                <img src="Carpeta_imagenes/Brianna_buttowski.webp" alt="Brianna Buttowski">
+                <div class="timeline-details">
+                    <div class="timeline-details-content">
+                        <h2>Brianna Buttowski</h2>
+                        <p>La hermana menor de Kick, competitiva y siempre buscando atención.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="brianna-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img src="" alt="Brianna Buttowski PNG">
-            <h2>Brianna Buttowski</h2>
-            <p>Brianna Buttowski es la hermana menor de Kick. Es una niña mimada y la reina de los concursos de belleza. A menudo se mete en problemas y Kick tiene que salvarla.</p>
+
+        <!-- Papá -->
+        <div class="timeline-stripe-item" onclick="expandCard(this)">
+            <div class="timeline-stripe-card">
+                <h3>Harold Buttowski</h3>
+                <img src="Carpeta_imagenes/Harold_buttowski.webp" alt="Harold Buttowski">
+                <div class="timeline-details">
+                    <div class="timeline-details-content">
+                        <h2>Harold Buttowski</h2>
+                        <p>El padre de Kick, amable pero algo despistado.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="harold-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img src="" alt="Harold Buttowski PNG">
-            <h2>Harold Buttowski</h2>
-            <p>Harold Buttowski es el padre de Kick. Es un hombre alegre y un poco torpe que se preocupa profundamente por su familia. A menudo no está al tanto de las peligrosas acrobacias de Kick.</p>
+
+        <!-- Mamá -->
+        <div class="timeline-stripe-item" onclick="expandCard(this)">
+            <div class="timeline-stripe-card">
+                <h3>Honey Buttowski</h3>
+                <img src="Carpeta_imagenes/Honey_buttowski.webp" alt="Honey Buttowski">
+                <div class="timeline-details">
+                    <div class="timeline-details-content">
+                        <h2>Honey Buttowski</h2>
+                        <p>La madre de Kick, dedicada a mantener unida a la familia.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="honey-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img src="" alt="Honey Buttowski PNG">
-            <h2>Honey Buttowski</h2>
-            <p>Honey Buttowski es la madre de Kick. Es una madre cariñosa y preocupada que a menudo se preocupa por la seguridad de Kick. También es una ex piloto de acrobacias.</p>
+
+        <!-- Kendall -->
+        <div class="timeline-stripe-item" onclick="expandCard(this)">
+            <div class="timeline-stripe-card">
+                <h3>Kendall Perkins</h3>
+                <img src="Carpeta_imagenes/Kendall_Perkins.webp" alt="Kendall Perkins">
+                <div class="timeline-details">
+                    <div class="timeline-details-content">
+                        <h2>Kendall Perkins</h2>
+                        <p>La compañera de escuela de Kick, inteligente y decidida.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-    <div id="wade-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img src="" alt="Wade PNG">
-            <h2>Wade</h2>
-            <p>Wade es un amigo de Kick que trabaja en la tienda de conveniencia local, Food 'n' Fix. Es relajado y a menudo ayuda a Kick a conseguir los suministros que necesita para sus acrobacias.</p>
+
+        <!-- Ronaldo -->
+        <div class="timeline-stripe-item" onclick="expandCard(this)">
+            <div class="timeline-stripe-card">
+                <h3>Ronaldo</h3>
+                <img src="Carpeta_imagenes/RonaldoDefend.webp" alt="Ronaldo">
+                <div class="timeline-details">
+                    <div class="timeline-details-content">
+                        <h2>Ronaldo</h2>
+                        <p>El vecino de Kick, con el que suele tener rivalidad y discusiones.</p>
+                    </div>
+                </div>
+            </div>
         </div>
+
     </div>
-    <div id="kendall-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-button">&times;</span>
-            <img src="" alt="Kendall Perkins PNG">
-            <h2>Kendall Perkins</h2>
-            <p>Kendall Perkins es la vecina y rival de Kick. Es una chica inteligente y competitiva que a menudo choca con Kick. A pesar de su rivalidad, a veces muestran un respeto a regañadientes el uno por el otro.</p>
-        </div>
-    </div>
+    </section>
 
     <footer>
         <div class="footer-content">
