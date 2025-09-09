@@ -28,4 +28,35 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.classList.toggle('show');
         });
     }
+
+    const timelineCards = document.querySelectorAll('.timeline-card');
+    const modals = document.querySelectorAll('.modal');
+    const closeButtons = document.querySelectorAll('.close-button');
+
+    timelineCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const modalId = card.dataset.modal;
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+            }
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const modal = button.closest('.modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
+
+    window.addEventListener('click', (event) => {
+        modals.forEach(modal => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+    });
 });
