@@ -421,25 +421,58 @@ footer {
 }
 
 /* Personajes */
+
 #personajes {
     padding: 50px 20px;
-    background-color: #1d3557;
-    background-image: url('../Carpeta_imagenes/explosion_bg.jpg');
+    background-image: url('../Carpeta_imagenes/FONDO_azul_IA.webp');
     background-size: cover;
+}
+
+.section-title {
+    font-family: 'Bangers', cursive;
+    font-size: 4em;
+    color: #e63946;
+    text-shadow: 4px 4px 0 #fca311, -4px -4px 0 #fca311, 4px -4px 0 #fca311, -4px 4px 0 #fca311;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.action-title {
+    font-family: 'Bangers', cursive;
+    font-size: 5em;
+    color: #fff;
+    text-shadow: 5px 5px 0 #e63946, -5px -5px 0 #fca311, 5px -5px 0 #e63946, -5px 5px 0 #fca311;
+    text-align: center;
+    margin-bottom: 50px;
+    letter-spacing: 3px;
+    transform: skew(-10deg);
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { transform: skew(-10deg) scale(1); }
+    100% { transform: skew(-10deg) scale(1.05); }
 }
 
 .timeline-stripe {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 20px;
     max-width: 800px;
     margin: 0 auto;
 }
 
 .timeline-stripe-item {
-  width: 100%;
+  width: 48%; /* Para dos columnas con un pequeño espacio entre ellas */
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .timeline-stripe-item {
+        width: 100%; /* Stack on smaller screens */
+    }
 }
 
 .timeline-stripe-card {
@@ -460,6 +493,10 @@ footer {
     transform: rotate(2deg);
 }
 
+.timeline-stripe-item:nth-child(odd) .timeline-stripe-card {
+    flex-direction: row-reverse; /* Image on left, title on right */
+}
+
 .timeline-stripe-card h3 {
   margin: 0;
   font-family: 'Bangers', cursive;
@@ -471,8 +508,8 @@ footer {
 
 .timeline-stripe-card img {
   width: 150px;
-  height: 100%;
-  object-fit: cover;
+  height: 115%;
+  object-fit: contain;
   transition: transform 0.3s ease;
   transform: scale(1.2) rotate(10deg);
   filter: drop-shadow(0 10px 8px rgba(0,0,0,0.3));
@@ -484,6 +521,7 @@ footer {
   transition: max-height 0.5s ease-in-out;
   text-align: center;
   flex: 1;
+  box-sizing: border-box; /* Ensure padding is included in element's total width/height */
 }
 
 .timeline-details h2 {
@@ -491,20 +529,22 @@ footer {
   font-family: 'Bangers', cursive;
   color: #e63946;
   font-size: 2.5rem;
+  word-wrap: break-word; /* Break long words */
 }
 
 .timeline-details p {
   font-size: 1.2rem;
   color: #1d3557;
-  max-width: 80%;
+  max-width: 100%;
   margin: 0 auto;
+  word-wrap: break-word; /* Break long words */
 }
 
 /* Estado expandido */
 .timeline-stripe-item.active .timeline-stripe-card {
   flex-direction: row;
   overflow: visible;
-  padding-left: 100px;
+  padding: 1rem; /* Adjust padding to give more space */
   background-color: #fca311;
   border-color: #e63946;
   transform: rotate(0deg);
@@ -512,8 +552,6 @@ footer {
 
 .timeline-stripe-item:nth-child(even).active .timeline-stripe-card {
     flex-direction: row-reverse;
-    padding-left: 1rem;
-    padding-right: 100px;
 }
 
 .timeline-stripe-item.active .timeline-stripe-card h3 {
@@ -521,16 +559,18 @@ footer {
 }
 
 .timeline-stripe-item.active .timeline-stripe-card img {
-  transform: scale(1.8) rotate(-5deg) translateX(-90px);
+  transform: scale(1.8) rotate(-5deg) translateX(-50px); /* Adjust translateX */
 }
 
 .timeline-stripe-item:nth-child(even).active .timeline-stripe-card img {
-  transform: scale(1.8) rotate(5deg) translateX(90px);
+  transform: scale(1.8) rotate(5deg) translateX(50px); /* Adjust translateX */
 }
 
 .timeline-stripe-item.active .timeline-details {
-  max-height: 500px; /* O un valor suficientemente grande */
+  max-height: 1000px; /* Increased max-height */
+  padding: 0 1rem; /* Add padding to details */
 }
+
 
 .timeline-stripe-item.dimmed {
   opacity: 0.4;
