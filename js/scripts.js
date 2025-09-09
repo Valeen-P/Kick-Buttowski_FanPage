@@ -29,3 +29,21 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+function expandCard(element) {
+    const allItems = document.querySelectorAll(".timeline-stripe-item");
+
+    if (element.classList.contains("active")) {
+        // Si ya está activa, la cerramos
+        element.classList.remove("active");
+        allItems.forEach(item => item.classList.remove("dimmed"));
+    } else {
+        // Activamos esta y atenuamos el resto
+        allItems.forEach(item => {
+            item.classList.remove("active");
+            item.classList.add("dimmed");
+        });
+        element.classList.add("active");
+        element.classList.remove("dimmed");
+    }
+}
