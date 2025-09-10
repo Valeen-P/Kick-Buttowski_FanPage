@@ -418,6 +418,39 @@ footer {
         flex-direction: column;
         align-items: center;
     }
+
+    /* Adjustments for expanded character cards */
+    .timeline-stripe-item.active .timeline-stripe-card {
+        flex-direction: column; /* Stack image and text */
+        height: auto; /* Allow height to adjust */
+        padding: 1rem;
+    }
+
+    .timeline-stripe-item.active .timeline-stripe-card img {
+        transform: scale(1) rotate(0deg) translateX(0px); /* Smaller image, no translation */
+        margin-bottom: 1rem; /* Space between image and text */
+        max-width: 80%; /* Ensure image fits within card */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .timeline-stripe-item:nth-child(even).active .timeline-stripe-card img {
+        transform: scale(1) rotate(0deg) translateX(0px); /* Apply to even items too */
+        max-width: 80%; /* Ensure image fits within card */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .timeline-details h2 {
+        font-size: 2rem; /* Smaller title */
+    }
+
+    .timeline-details p {
+        font-size: 1rem; /* Smaller paragraph text */
+    }
+
+    /* Ensure the title of the section is also responsive */
+    .action-title {
+        font-size: 3em; /* Smaller title for the section */
+    }
 }
 
 /* Personajes */
