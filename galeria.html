@@ -16,7 +16,6 @@
             flex-direction: column;
             align-items: center;
             padding: 20px;
-            max-width: 1200px;
             margin: 0 auto;
         }
         .gallery-row {
@@ -27,8 +26,7 @@
             margin-bottom: 15px;
         }
         .gallery-row a {
-            flex: 1 1 calc(25% - 20px); /* 4 images per row, accounting for gap */
-            max-width: calc(25% - 20px);
+            width: 315px;
             box-sizing: border-box;
             overflow: hidden;
             border-radius: 8px;
@@ -40,31 +38,9 @@
         }
         .gallery-row img {
             width: 100%;
-            height: 150px; /* Fixed height for uniformity */
-            object-fit: cover; /* Cover the area, cropping if necessary */
+            height: auto;
             display: block;
             border-radius: 8px;
-        }
-
-        @media (max-width: 1024px) {
-            .gallery-row a {
-                flex: 1 1 calc(33.333% - 20px); /* 3 images per row */
-                max-width: calc(33.333% - 20px);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .gallery-row a {
-                flex: 1 1 calc(50% - 20px); /* 2 images per row */
-                max-width: calc(50% - 20px);
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-row a {
-                flex: 1 1 calc(100% - 20px); /* 1 image per row */
-                max-width: calc(100% - 20px);
-            }
         }
     </style>
 </head>
@@ -87,39 +63,39 @@
         </nav>
     </header>
 
-    <main id="contenido">
+    <main id="contenido" style = "max-width: 1400px;">
         <section class="gallery-section">
-            <h2 class="section-title action-title">¡Galería de Acrobacias!</h2>
+            <h2 class="section-title action-title">¡Galería Épica!</h2>
             <div class="gallery-container">
                 <div class="gallery-row">
-                    <a href="Carpeta_imagenes/Imagenes_galeria/carrera_kick.webp" data-lightbox="gallery" data-title="Carrera de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/carrera_kick.webp" alt="Carrera de Kick"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/casa_kick.webp" data-lightbox="gallery" data-title="Casa de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/casa_kick.webp" alt="Casa de Kick"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/comercio_gunther_kick.webp" data-lightbox="gallery" data-title="Comercio de Gunther y Kick"><img src="Carpeta_imagenes/Imagenes_galeria/comercio_gunther_kick.webp" alt="Comercio de Gunther y Kick"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/el_gran_pez.webp" data-lightbox="gallery" data-title="El Gran Pez"><img src="Carpeta_imagenes/Imagenes_galeria/el_gran_pez.webp" alt="El Gran Pez"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/carrera_kick.webp" data-lightbox="gallery" data-title="Carrera de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/carrera_kick_ch.webp" alt="Carrera de Kick"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/surf_sobre_gatos.webp" data-lightbox="gallery" data-title="Casa de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/surf_sobre_gatos_ch.webp" alt="Surf sobre gatos"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/comercio_gunther_kick.webp" data-lightbox="gallery" data-title="Comercio de Gunther y Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/comercio_gunther_kick_ch.webp" alt="Comercio de los Papás de Gunther"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/el_gran_pez.webp" data-lightbox="gallery" data-title="El Gran Pez"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/el_gran_pez_ch.webp" alt="El Gran Pez"></a>
                 </div>
                 <div class="gallery-row">
-                    <a href="Carpeta_imagenes/Imagenes_galeria/el_gran_pez2.webp" data-lightbox="gallery" data-title="El Gran Pez 2"><img src="Carpeta_imagenes/Imagenes_galeria/el_gran_pez2.webp" alt="El Gran Pez 2"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/Estadio_kick.webp" data-lightbox="gallery" data-title="Estadio de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/Estadio_kick.webp" alt="Estadio de Kick"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/gunther_vikingo.webp" data-lightbox="gallery" data-title="Gunther Vikingo"><img src="Carpeta_imagenes/Imagenes_galeria/gunther_vikingo.webp" alt="Gunther Vikingo"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_acrobacia.webp" data-lightbox="gallery" data-title="Kick Acrobacia"><img src="Carpeta_imagenes/Imagenes_galeria/kick_acrobacia.webp" alt="Kick Acrobacia"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/el_gran_pez2.webp" data-lightbox="gallery" data-title="El Gran Pez 2"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/el_gran_pez2_ch.webp" alt="El Gran Pez 2"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/Estadio_kick.webp" data-lightbox="gallery" data-title="Estadio de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/Estadio_kick_ch.webp" alt="Estadio de Kick"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/gunther_vikingo.webp" data-lightbox="gallery" data-title="Gunther Vikingo"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/gunther_vikingo_ch.webp" alt="Gunther Vikingo"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_acrobacia.webp" data-lightbox="gallery" data-title="Kick Acrobacia"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_acrobacia_ch.webp" alt="Kick Acrobacia"></a>
                 </div>
                 <div class="gallery-row">
-                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_acrobacia2.webp" data-lightbox="gallery" data-title="Kick Acrobacia 2"><img src="Carpeta_imagenes/Imagenes_galeria/kick_acrobacia2.webp" alt="Kick Acrobacia 2"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_carrera.webp" data-lightbox="gallery" data-title="Kick Carrera"><img src="Carpeta_imagenes/Imagenes_galeria/kick_carrera.webp" alt="Kick Carrera"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_carrera2.webp" data-lightbox="gallery" data-title="Kick Carrera 2"><img src="Carpeta_imagenes/Imagenes_galeria/kick_carrera2.webp" alt="Kick Carrera 2"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_castigado.webp" data-lightbox="gallery" data-title="Kick Castigado"><img src="Carpeta_imagenes/Imagenes_galeria/kick_castigado.webp" alt="Kick Castigado"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_acrobacia2.webp" data-lightbox="gallery" data-title="Kick Acrobacia 2"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_acrobacia2_ch.webp" alt="Kick Acrobacia 2"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_carrera.webp" data-lightbox="gallery" data-title="Kick Carrera"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_carrera_ch.webp" alt="Kick Carrera"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_carrera2.webp" data-lightbox="gallery" data-title="Kick Carrera 2"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_carrera2_ch.webp" alt="Kick Carrera 2"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_castigado.webp" data-lightbox="gallery" data-title="Kick Castigado"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_castigado_ch.webp" alt="Kick Castigado"></a>
                 </div>
                 <div class="gallery-row">
-                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_entrada.webp" data-lightbox="gallery" data-title="Kick Entrada"><img src="Carpeta_imagenes/Imagenes_galeria/kick_entrada.webp" alt="Kick Entrada"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_fan.webp" data-lightbox="gallery" data-title="Kick Fan"><img src="Carpeta_imagenes/Imagenes_galeria/kick_fan.webp" alt="Kick Fan"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/Kick_guarida.webp" data-lightbox="gallery" data-title="Guarida de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/Kick_guarida.webp" alt="Guarida de Kick"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_travesura.webp" data-lightbox="gallery" data-title="Kick Travesura"><img src="Carpeta_imagenes/Imagenes_galeria/kick_travesura.webp" alt="Kick Travesura"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_entrada.webp" data-lightbox="gallery" data-title="Kick Entrada"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_entrada_ch.webp" alt="Kick Entrada"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_fan.webp" data-lightbox="gallery" data-title="Kick Fan"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_fan_ch.webp" alt="Kick Fan"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/Kick_guarida.webp" data-lightbox="gallery" data-title="Guarida de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/Kick_guarida_ch.webp" alt="Guarida de Kick"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_travesura.webp" data-lightbox="gallery" data-title="Kick Travesura"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_travesura_ch.webp" alt="Kick Travesura"></a>
                 </div>
                 <div class="gallery-row">
-                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_y_brabucones.webp" data-lightbox="gallery" data-title="Kick y Brabucones"><img src="Carpeta_imagenes/Imagenes_galeria/kick_y_brabucones.webp" alt="Kick y Brabucones"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/Kickasaurio_rex.webp" data-lightbox="gallery" data-title="Kickasaurio Rex"><img src="Carpeta_imagenes/Imagenes_galeria/Kickasaurio_rex.webp" alt="Kickasaurio Rex"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/Los_chimichangas.webp" data-lightbox="gallery" data-title="Los Chimichangas"><img src="Carpeta_imagenes/Imagenes_galeria/Los_chimichangas.webp" alt="Los Chimichangas"></a>
-                    <a href="Carpeta_imagenes/Imagenes_galeria/monos_motocross_kick.webp" data-lightbox="gallery" data-title="Monos Motocross Kick"><img src="Carpeta_imagenes/Imagenes_galeria/monos_motocross_kick.webp" alt="Monos Motocross Kick"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_y_brabucones.webp" data-lightbox="gallery" data-title="Kick y Brabucones"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_y_brabucones_ch.webp" alt="Kick y Brabucones"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/Vecindario_kick.webp" data-lightbox="gallery" data-title="Kickasaurio Rex"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/Vecindario_kick_ch.webp" alt="Vecindario de Kick"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/Los_chimichangas.webp" data-lightbox="gallery" data-title="Los Chimichangas"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/Los_chimichangas_ch.webp" alt="Los Chimichangas"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/monos_motocross_kick.webp" data-lightbox="gallery" data-title="Monos Motocross Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/monos_motocross_kick_ch.webp" alt="Monos Motocross Kick"></a>
                 </div>
             </div>
         </section>
