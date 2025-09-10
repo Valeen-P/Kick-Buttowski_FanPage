@@ -6,6 +6,7 @@ body {
     background-color: #f0f0f0;
     color: #333;
     background-image: url('../Carpeta_imagenes/double-bubble-outline-inicio.webp');
+    overflow-x: hidden;
 }
 
 /* Header y Navegación */
@@ -382,6 +383,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    nav {
+        max-width: 100%;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -608,4 +613,15 @@ footer {
 .timeline-stripe-item.dimmed {
   opacity: 0.4;
   transform: scale(0.95);
+}
+
+@media (min-width: 1024px) {
+    .scroll-section {
+        justify-content: center;
+        gap: 40px;
+    }
+    .scroll-section .texto,
+    .scroll-section .imagen {
+        flex: 0 0 500px; /* Don't grow, basis 500px */
+    }
 }

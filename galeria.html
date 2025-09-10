@@ -10,7 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
-    <style>
+        <style>
+        main.gallery-main {
+            max-width: 1400px;
+        }
         .gallery-container {
             display: flex;
             flex-direction: column;
@@ -26,7 +29,9 @@
             margin-bottom: 15px;
         }
         .gallery-row a {
-            width: 315px;
+            /* Default to 2 columns for mobile */
+            flex: 1 1 calc(50% - 20px);
+            max-width: calc(50% - 20px);
             box-sizing: border-box;
             overflow: hidden;
             border-radius: 8px;
@@ -41,6 +46,22 @@
             height: auto;
             display: block;
             border-radius: 8px;
+        }
+
+        /* Tablet - 3 columns */
+        @media (min-width: 768px) {
+            .gallery-row a {
+                flex: 1 1 calc(33.333% - 20px);
+                max-width: calc(33.333% - 20px);
+            }
+        }
+
+        /* Desktop - 4 columns */
+        @media (min-width: 1024px) {
+            .gallery-row a {
+                flex: 1 1 calc(25% - 20px);
+                max-width: calc(25% - 20px);
+            }
         }
     </style>
 </head>
