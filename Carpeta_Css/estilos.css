@@ -6,6 +6,7 @@ body {
     background-color: #f0f0f0;
     color: #333;
     background-image: url('../Carpeta_imagenes/double-bubble-outline-inicio.webp');
+    overflow-x: hidden;
 }
 
 /* Header y Navegación */
@@ -91,7 +92,7 @@ nav {
 .scroll-section {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 100px;
     opacity: 0;
     transform: translateY(50px);
@@ -382,6 +383,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    nav {
+        max-width: 100%;
+    }
+
     .nav-links {
         display: none;
         flex-direction: column;
@@ -417,6 +422,39 @@ footer {
     .contacto-container {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Adjustments for expanded character cards */
+    .timeline-stripe-item.active .timeline-stripe-card {
+        flex-direction: column; /* Stack image and text */
+        height: auto; /* Allow height to adjust */
+        padding: 1rem;
+    }
+
+    .timeline-stripe-item.active .timeline-stripe-card img {
+        transform: scale(1) rotate(0deg) translateX(0px); /* Smaller image, no translation */
+        margin-bottom: 1rem; /* Space between image and text */
+        max-width: 80%; /* Ensure image fits within card */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .timeline-stripe-item:nth-child(even).active .timeline-stripe-card img {
+        transform: scale(1) rotate(0deg) translateX(0px); /* Apply to even items too */
+        max-width: 80%; /* Ensure image fits within card */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .timeline-details h2 {
+        font-size: 2rem; /* Smaller title */
+    }
+
+    .timeline-details p {
+        font-size: 1rem; /* Smaller paragraph text */
+    }
+
+    /* Ensure the title of the section is also responsive */
+    .action-title {
+        font-size: 3em; /* Smaller title for the section */
     }
 }
 
@@ -575,4 +613,15 @@ footer {
 .timeline-stripe-item.dimmed {
   opacity: 0.4;
   transform: scale(0.95);
+}
+
+@media (min-width: 1024px) {
+    .scroll-section {
+        justify-content: center;
+        gap: 40px;
+    }
+    .scroll-section .texto,
+    .scroll-section .imagen {
+        flex: 0 0 500px; /* Don't grow, basis 500px */
+    }
 }

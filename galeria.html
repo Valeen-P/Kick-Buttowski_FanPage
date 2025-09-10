@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Kick Buttowski: Suburban Daredevil</title>
+    <link rel="stylesheet" href="Carpeta_Css/estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
+        <style>
+        main.gallery-main {
+            max-width: 1400px;
+        }
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        .gallery-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        .gallery-row a {
+            /* Default to 2 columns for mobile */
+            flex: 1 1 calc(50% - 20px);
+            max-width: calc(50% - 20px);
+            box-sizing: border-box;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .gallery-row a:hover {
+            transform: scale(1.03);
+        }
+        .gallery-row img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* Tablet - 3 columns */
+        @media (min-width: 768px) {
+            .gallery-row a {
+                flex: 1 1 calc(33.333% - 20px);
+                max-width: calc(33.333% - 20px);
+            }
+        }
+
+        /* Desktop - 4 columns */
+        @media (min-width: 1024px) {
+            .gallery-row a {
+                flex: 1 1 calc(25% - 20px);
+                max-width: calc(25% - 20px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Carpeta_imagenes/logo_kick.png" alt="Kick Buttowski Logo">
+            </div>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html#portada">Inicio</a></li>
+                <li><a href="index.html#contenido">Acerca de</a></li>
+                <li><a href="index.html#personajes">Personajes</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido" style = "max-width: 1400px;">
+        <section class="gallery-section">
+            <h2 class="section-title action-title">¡Galería Épica!</h2>
+            <div class="gallery-container">
+                <div class="gallery-row">
+                    <a href="Carpeta_imagenes/Imagenes_galeria/carrera_kick.webp" data-lightbox="gallery" data-title="Carrera de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/carrera_kick_ch.webp" alt="Carrera de Kick"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/surf_sobre_gatos.webp" data-lightbox="gallery" data-title="Casa de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/surf_sobre_gatos_ch.webp" alt="Surf sobre gatos"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/comercio_gunther_kick.webp" data-lightbox="gallery" data-title="Comercio de Gunther y Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/comercio_gunther_kick_ch.webp" alt="Comercio de los Papás de Gunther"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/el_gran_pez.webp" data-lightbox="gallery" data-title="El Gran Pez"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/el_gran_pez_ch.webp" alt="El Gran Pez"></a>
+                </div>
+                <div class="gallery-row">
+                    <a href="Carpeta_imagenes/Imagenes_galeria/el_gran_pez2.webp" data-lightbox="gallery" data-title="El Gran Pez 2"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/el_gran_pez2_ch.webp" alt="El Gran Pez 2"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/Estadio_kick.webp" data-lightbox="gallery" data-title="Estadio de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/Estadio_kick_ch.webp" alt="Estadio de Kick"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/gunther_vikingo.webp" data-lightbox="gallery" data-title="Gunther Vikingo"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/gunther_vikingo_ch.webp" alt="Gunther Vikingo"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_acrobacia.webp" data-lightbox="gallery" data-title="Kick Acrobacia"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_acrobacia_ch.webp" alt="Kick Acrobacia"></a>
+                </div>
+                <div class="gallery-row">
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_acrobacia2.webp" data-lightbox="gallery" data-title="Kick Acrobacia 2"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_acrobacia2_ch.webp" alt="Kick Acrobacia 2"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_carrera.webp" data-lightbox="gallery" data-title="Kick Carrera"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_carrera_ch.webp" alt="Kick Carrera"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_carrera2.webp" data-lightbox="gallery" data-title="Kick Carrera 2"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_carrera2_ch.webp" alt="Kick Carrera 2"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_castigado.webp" data-lightbox="gallery" data-title="Kick Castigado"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_castigado_ch.webp" alt="Kick Castigado"></a>
+                </div>
+                <div class="gallery-row">
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_entrada.webp" data-lightbox="gallery" data-title="Kick Entrada"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_entrada_ch.webp" alt="Kick Entrada"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_fan.webp" data-lightbox="gallery" data-title="Kick Fan"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_fan_ch.webp" alt="Kick Fan"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/Kick_guarida.webp" data-lightbox="gallery" data-title="Guarida de Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/Kick_guarida_ch.webp" alt="Guarida de Kick"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_travesura.webp" data-lightbox="gallery" data-title="Kick Travesura"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_travesura_ch.webp" alt="Kick Travesura"></a>
+                </div>
+                <div class="gallery-row">
+                    <a href="Carpeta_imagenes/Imagenes_galeria/kick_y_brabucones.webp" data-lightbox="gallery" data-title="Kick y Brabucones"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/kick_y_brabucones_ch.webp" alt="Kick y Brabucones"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/Vecindario_kick.webp" data-lightbox="gallery" data-title="Kickasaurio Rex"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/Vecindario_kick_ch.webp" alt="Vecindario de Kick"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/Los_chimichangas.webp" data-lightbox="gallery" data-title="Los Chimichangas"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/Los_chimichangas_ch.webp" alt="Los Chimichangas"></a>
+                    <a href="Carpeta_imagenes/Imagenes_galeria/monos_motocross_kick.webp" data-lightbox="gallery" data-title="Monos Motocross Kick"><img src="Carpeta_imagenes/Imagenes_galeria/miniaturas/monos_motocross_kick_ch.webp" alt="Monos Motocross Kick"></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Kick Buttowski Fan Page. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/kick.buttowski.10420/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/eskickbuttowski/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/playlist?list=PLpbdLXz_BiMUBRPNty5jSvECPbHQpOkGW&si=lCMplYH74eWgurF8" target="_blank"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        })
+    </script>
+</body>
+</html>
