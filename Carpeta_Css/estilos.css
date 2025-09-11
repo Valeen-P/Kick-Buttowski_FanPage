@@ -1,5 +1,5 @@
 /* Estilos Generales */
-body {
+html, body {
     font-family: 'Comic Neue', cursive;
     margin: 0;
     padding: 0;
@@ -580,6 +580,7 @@ footer {
 
 /* Estado expandido */
 .timeline-stripe-item.active .timeline-stripe-card {
+  position: relative; /* Para posicionar la imagen absolutamente */
   flex-direction: row;
   overflow: visible;
   padding: 1rem; /* Adjust padding to give more space */
@@ -597,11 +598,25 @@ footer {
 }
 
 .timeline-stripe-item.active .timeline-stripe-card img {
-  transform: scale(1.8) rotate(-5deg) translateX(-50px); /* Adjust translateX */
+  position: absolute;
+  top: 50%;
+  height: 115%;
+  width: 150px;
+  pointer-events: none;
+  object-fit: contain;
+  z-index: 10;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 10px 8px rgba(0,0,0,0.3));
+  /* Regla para impares (derecha) */
+  transform: translateY(-50%) scale(1.8) rotate(-5deg);
+  right: -50px;
 }
 
 .timeline-stripe-item:nth-child(even).active .timeline-stripe-card img {
-  transform: scale(1.8) rotate(5deg) translateX(50px); /* Adjust translateX */
+  /* Regla para pares (izquierda) - sobreescribe */
+  transform: translateY(-50%) scale(1.8) rotate(5deg);
+  left: -50px;
+  right: auto; /* importante para anular la regla anterior */
 }
 
 .timeline-stripe-item.active .timeline-details {
