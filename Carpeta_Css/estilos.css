@@ -545,7 +545,7 @@ footer {
 }
 
 .timeline-stripe-card img {
-  width: 150px;
+  width: 170px;
   height: 115%;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -609,14 +609,14 @@ footer {
   filter: drop-shadow(0 10px 8px rgba(0,0,0,0.3));
   /* Regla para impares (derecha) */
   transform: translateY(-50%) scale(1.4) rotate(-5deg);
-  left: -50px;
+  left: 10px;
   max-width: 40vw;
 }
 
 .timeline-stripe-item:nth-child(even).active .timeline-stripe-card img {
   /* Regla para pares (izquierda) - sobreescribe */
   transform: translateY(-50%) scale(1.4) rotate(5deg);
-  right: -50px;
+  right: 10px;
   left: auto; /* importante para anular la regla anterior */
   max-width: 40vw;
 }
