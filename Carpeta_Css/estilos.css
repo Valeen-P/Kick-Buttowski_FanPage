@@ -609,14 +609,14 @@ footer {
   filter: drop-shadow(0 10px 8px rgba(0,0,0,0.3));
   /* Regla para impares (derecha) */
   transform: translateY(-50%) scale(1.8) rotate(-5deg);
-  right: -50px;
+  left: -50px;
 }
 
 .timeline-stripe-item:nth-child(even).active .timeline-stripe-card img {
   /* Regla para pares (izquierda) - sobreescribe */
   transform: translateY(-50%) scale(1.8) rotate(5deg);
-  left: -50px;
-  right: auto; /* importante para anular la regla anterior */
+  right: -50px;
+  left: auto; /* importante para anular la regla anterior */
 }
 
 .timeline-stripe-item.active .timeline-details {
