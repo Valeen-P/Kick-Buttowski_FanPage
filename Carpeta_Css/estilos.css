@@ -1,5 +1,5 @@
 /* Estilos Generales */
-body {
+html, body {
     font-family: 'Comic Neue', cursive;
     margin: 0;
     padding: 0;
@@ -525,6 +525,15 @@ footer {
   border: 4px solid black;
   transform: rotate(-2deg);
   height: 200px;
+  position: relative; /* Para que z-index funcione */
+}
+
+
+.timeline-stripe-card:hover,
+.timeline-stripe-item:nth-child(even) .timeline-stripe-card:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+    z-index: 5; /* Asegura que la tarjeta se muestre por encima de las demás */
 }
 
 .timeline-stripe-item:nth-child(even) .timeline-stripe-card {
@@ -545,7 +554,7 @@ footer {
 }
 
 .timeline-stripe-card img {
-  width: 150px;
+  width: 170px;
   height: 115%;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -580,6 +589,7 @@ footer {
 
 /* Estado expandido */
 .timeline-stripe-item.active .timeline-stripe-card {
+  position: relative; /* Para posicionar la imagen absolutamente */
   flex-direction: row;
   overflow: visible;
   padding: 1rem; /* Adjust padding to give more space */
@@ -597,16 +607,38 @@ footer {
 }
 
 .timeline-stripe-item.active .timeline-stripe-card img {
-  transform: scale(1.8) rotate(-5deg) translateX(-50px); /* Adjust translateX */
+  position: absolute;
+  top: 50%;
+  height: 115%;
+  width: 150px;
+  pointer-events: none;
+  object-fit: contain;
+  z-index: 10;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 10px 8px rgba(0,0,0,0.3));
+  /* Regla para impares (derecha) */
+  transform: translateY(-50%) scale(1.4) rotate(-5deg);
+  left: 10px;
+  max-width: 40vw;
 }
 
 .timeline-stripe-item:nth-child(even).active .timeline-stripe-card img {
-  transform: scale(1.8) rotate(5deg) translateX(50px); /* Adjust translateX */
+  /* Regla para pares (izquierda) - sobreescribe */
+  transform: translateY(-50%) scale(1.4) rotate(5deg);
+  right: 10px;
+  left: auto; /* importante para anular la regla anterior */
+  max-width: 40vw;
 }
 
 .timeline-stripe-item.active .timeline-details {
   max-height: 1000px; /* Increased max-height */
-  padding: 0 1rem; /* Add padding to details */
+  /*padding: 0 1rem; /* Add padding to details */
+  margin-left: 180px; /* espacio para imagen en impares */
+}
+
+.timeline-stripe-item:nth-child(even).active .timeline-details {
+  margin-left: 0;
+  margin-right: 180px; /* espacio para imagen en pares */
 }
 
 

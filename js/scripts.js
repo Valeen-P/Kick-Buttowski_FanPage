@@ -47,3 +47,14 @@ function expandCard(element) {
         element.classList.remove("dimmed");
     }
 }
+
+document.addEventListener('click', function(event) {
+    const activeItem = document.querySelector('.timeline-stripe-item.active');
+    // Si hay un item activo y el click NO fue dentro de un timeline-stripe-item, lo cerramos.
+    if (activeItem && !event.target.closest('.timeline-stripe-item')) {
+        activeItem.classList.remove('active');
+        document.querySelectorAll('.timeline-stripe-item').forEach(item => {
+            item.classList.remove('dimmed');
+        });
+    }
+});
