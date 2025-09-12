@@ -608,20 +608,28 @@ footer {
   transition: transform 0.3s ease;
   filter: drop-shadow(0 10px 8px rgba(0,0,0,0.3));
   /* Regla para impares (derecha) */
-  transform: translateY(-50%) scale(1.8) rotate(-5deg);
+  transform: translateY(-50%) scale(1.4) rotate(-5deg);
   left: -50px;
+  max-width: 40vw;
 }
 
 .timeline-stripe-item:nth-child(even).active .timeline-stripe-card img {
   /* Regla para pares (izquierda) - sobreescribe */
-  transform: translateY(-50%) scale(1.8) rotate(5deg);
+  transform: translateY(-50%) scale(1.4) rotate(5deg);
   right: -50px;
   left: auto; /* importante para anular la regla anterior */
+  max-width: 40vw;
 }
 
 .timeline-stripe-item.active .timeline-details {
   max-height: 1000px; /* Increased max-height */
-  padding: 0 1rem; /* Add padding to details */
+  /*padding: 0 1rem; /* Add padding to details */
+  margin-left: 180px; /* espacio para imagen en impares */
+}
+
+.timeline-stripe-item:nth-child(even).active .timeline-details {
+  margin-left: 0;
+  margin-right: 180px; /* espacio para imagen en pares */
 }
 
 
