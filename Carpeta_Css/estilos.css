@@ -525,6 +525,15 @@ footer {
   border: 4px solid black;
   transform: rotate(-2deg);
   height: 200px;
+  position: relative; /* Para que z-index funcione */
+}
+
+
+.timeline-stripe-card:hover,
+.timeline-stripe-item:nth-child(even) .timeline-stripe-card:hover {
+    transform: scale(1.05) rotate(0deg);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.4);
+    z-index: 5; /* Asegura que la tarjeta se muestre por encima de las demás */
 }
 
 .timeline-stripe-item:nth-child(even) .timeline-stripe-card {
